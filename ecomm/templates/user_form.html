@@ -1,0 +1,65 @@
+{% comment %}
+<html>
+    <head>
+        <title>{{title}}</title>
+    </head>
+    <body>
+        
+       <div>{{bdata}}</div>
+       {% for n in clist %}
+       <div>{{forloop.counter}} {{n}} </div>
+       {% endfor %}
+
+     
+        <table border="1" cellpadding="10">
+            <tr>
+                <th> Name </th>
+                <th> Phone </th>    
+            </tr>
+
+            {% for d in student_details %}
+            <tr>
+                <td>{{d.name}}</td>
+                <td>{{d.phone}}</td>
+            </tr>
+            {%endfor%}
+        </table>
+        
+        {% for n in numbers %}
+            {% if n > 20 %}
+            <div>{{n}}</div>
+            {% endif %}
+        {% endfor%}
+    </body>
+</html> 
+{% endcomment %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Two Numbers</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-12">
+            <form method="post">
+            {% csrf_token %}
+                <div>
+                    <lable for="">Value1</lable>
+                    <input type="text" name="num1" placeholder="Enter first number">
+                </div>
+                <div>
+                    <lable for="">Value2</lable>
+                    <input type="text" name="num2" placeholder="Enter first number">
+                </div>
+                <div class="pt-4">
+                    <button type="submit">Save</button>
+                </div>
+                finaloutput
+                <input type="text" value="{{finaloutput}}"/>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
