@@ -19,7 +19,10 @@ from django.urls import path, include
 from accounts import views
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('home.urls')),
+    path('products/', include('products.urls')),
     path('accounts/', include('accounts.urls')),
+    
     # path('login/', views.loginPage),
     # path('register/', views.register)
 ]

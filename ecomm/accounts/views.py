@@ -1,11 +1,31 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
 
 # Create your views here.
 def loginPage(request):
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+
+        user_obj = User.objects.filter(username = email)
+
+        if not user_obj.exists():
+            messages.warning(request, "Account not found.")
+            return HttpResponseRedirect(request.path_info)
+        
+        user_obj = authenticate(username = email, password = password)
+        if user_obj:
+            login(request, user_obj)
+            return redirect('/')
+
+        messages.warning(request, "Invalid credentials.")
+        return HttpResponseRedirect(request.path_info)
+
     return render(request, "login.html")
+
 
 def register(request):
     if request.method == "POST":

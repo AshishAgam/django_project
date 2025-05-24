@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -9,14 +11,14 @@
 <meta name="description" content="description">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Favicon -->
-<link rel="shortcut icon" href="static/images/favicon.png" />
+<link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
 <!-- Plugins CSS -->
-<link rel="stylesheet" href="static/css/plugins.css">
+<link rel="stylesheet" href="{% static 'css/plugins.css' %}">
 <!-- Bootstap CSS -->
-<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 <!-- Main Style CSS -->
-<link rel="stylesheet" href="static/css/style.css">
-<link rel="stylesheet" href="static/css/responsive.css">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/responsive.css' %}">
 </head>
 <body class="template-product belle">
 	<div class="pageWrapper">
@@ -79,7 +81,7 @@
                     <!--Desktop Logo-->
                     <div class="logo col-md-2 col-lg-2 d-none d-lg-block">
                         <a href="index.html">
-                            <img src="static/images/logo.svg" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                            <img src="{% static 'images/logo.svg' %}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                         </a>
                     </div>
                     <!--End Desktop Logo-->
@@ -177,7 +179,7 @@
                                                 </ul>
                                             </li>
                                             <li class="grid__item lvl-1 col-md-6 col-lg-6">
-                                                <a href="#"><img src="static/images/megamenu-bg1.jpg" alt="" title="" /></a>
+                                                <a href="#"><img src="{% static 'images/megamenu-bg1.jpg' %}" alt="" title="" /></a>
                                             </li>
                                         </ul>
                                     </div>
@@ -229,7 +231,7 @@
                                                 </li>
                                             </ul>
                                         </li>
-                                        <li class="grid__item large-up--one-whole imageCol"><a href="#"><img src="static/images/megamenu-bg2.jpg" alt=""></a></li>
+                                        <li class="grid__item large-up--one-whole imageCol"><a href="#"><img src="{% static 'images/megamenu-bg2.jpg' %}" alt=""></a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -278,7 +280,7 @@
                     <div class="col-6 col-sm-6 col-md-6 col-lg-2 d-block d-lg-none mobile-logo">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="static/images/logo.svg" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
+                                <img src="{% static 'images/logo.svg' %}" alt="Belle Multipurpose Html Template" title="Belle Multipurpose Html Template" />
                             </a>
                         </div>
                     </div>
@@ -293,7 +295,7 @@
                                 <ul class="mini-products-list">
                                     <li class="item">
                                         <a class="product-image" href="#">
-                                            <img src="static/images/product-images/cape-dress-1.jpg" alt="3/4 Sleeve Kimono Dress" title="" />
+                                            <img src="{% static 'images/product-images/cape-dress-1.jpg' %}" alt="3/4 Sleeve Kimono Dress" title="" />
                                         </a>
                                         <div class="product-details">
                                             <a href="#" class="remove"><i class="anm anm-times-l" aria-hidden="true"></i></a>
